@@ -12,22 +12,50 @@
     <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Manrope-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/style.css?v=1.0.4">
+    <link rel="stylesheet" href="styles/style.css?v=1.0.5">
   </head>
-  <body>
+  <body class="page">
+    <div class="page__header page__header--fixed">
+      <div class="page__header-container">
+        <div class="main-menu">
+          <div class="main-menu__content">
+            <div class="main-menu__logo"><img src="img/logo.svg" alt="Uniflow"></div>
+            <ul class="main-menu__nav">
+              <li class="main-menu__nav-item main-menu__nav-item--dropdown"><a class="main-menu__nav-link" href="#">Меню<span class="main-menu__nav-link-icon">
+                    <svg aria-hidden="true" width="16" height="16">
+                      <use xlink:href="img/sprite/sprite.svg#chevron-down"></use>
+                    </svg></span></a>
+                <div class="main-menu__list-wrapper main-menu__list-wrapper--dropdown-inner">
+                  <ul class="main-menu__list main-menu__list--dropdown-inner">
+                    <!-- TODO: замени якоря (#aktivnosti, #live-trenirovki, ...) на реальные id секций страницы сезона-->
+                    <li><a href="#aktivnosti">Активности</a></li>
+                    <li><a href="#live-trenirovki">Лайв-тренировки</a></li>
+                    <li><a href="#zaryadki">Зарядки</a></li>
+                    <li><a href="#super-serii">Суперсерии</a></li>
+                    <li><a href="#klubnaya-karta">Клубные карты</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="main-menu__nav-item"><a class="main-menu__nav-link" href="https://pilates-flow.ru/">На главную</a></li>
+            </ul>
+            <div class="main-menu__user-block">
+              <div class="main-menu__user-block-item main-menu__user-block-item--mobile-only">
+                <button class="button-icon button__open-mobile-menu-js" href="#">
+                  <svg aria-hidden="true" width="20" height="20">
+                    <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="main-menu__user-block-item main-menu__user-block-item--desktop-only">
+                <button class="button button--main button--s" href="#"><span class="button__content">   <span class="button__text">Присоединиться</span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="season-hero">
       <div class="season-hero__container">
-        <nav class="season-hero__nav">
-          <div class="season-hero__logo">
-            <div class="logo-block"> <img src="img/logo.svg" alt="Pilatesflow" width="88" height="16"></div>
-          </div>
-          <div class="season-hero__menu"><a class="season-hero__menu-link" href="#aktivnosti">Активности</a><a class="season-hero__menu-link" href="#live-trenirovki">Лайф-тренировки</a><a class="season-hero__menu-link" href="#zaryadki">Зарядки</a><a class="season-hero__menu-link" href="#super-serii">Супер-серии</a><a class="season-hero__menu-link" href="#klubnaya-karta">Клубная карта</a></div>
-          <div class="season-hero__nav-actions"><a class="button button--main button--m season-hero__nav-cta" href="#klubnaya-karta"><span class="button__content">   <span class="button__text">Присоединиться</span></span></a>
-            <button class="season-hero__burger js-burger" type="button" aria-label="Меню"><span></span><span></span></button>
-          </div>
-          <div class="season-hero__dropdown js-dropdown"><a class="season-hero__dropdown-link" href="#aktivnosti">Активности</a><a class="season-hero__dropdown-link" href="#live-trenirovki">Лайф-тренировки</a><a class="season-hero__dropdown-link" href="#zaryadki">Зарядки</a><a class="season-hero__dropdown-link" href="#super-serii">Супер-серии</a><a class="season-hero__dropdown-link" href="#klubnaya-karta">Клубная карта</a><a class="button button--main button--m button--full-width season-hero__dropdown-cta" href="#klubnaya-karta"><span class="button__content">   <span class="button__text">Присоединиться</span></span></a>
-          </div>
-        </nav>
         <div class="season-hero__content">
           <div class="season-hero__tag-title">
             <div class="tag">#ВЕСЕННИЙ СЕЗОН В PILATES FLOW</div>
@@ -656,6 +684,32 @@
         <div class="footer__policy">ИП Грин Светлана Игоревна. ИНН 645292761890. Все права защищены © 2017 - 2025 pilates-flow.ru</div>
       </div>
     </div>
-    <script src="js/main.js?v=1.0.4" defer></script>
+    <div class="mobile-menu__overlay mobile-menu-js">
+      <div class="mobile-menu">
+        <button class="mobile-menu__close mobile-menu__close-js">
+              <svg aria-hidden="true" width="20" height="20">
+                <use xlink:href="img/sprite/sprite.svg#cross"></use>
+              </svg>
+        </button>
+        <div class="mobile-menu__content">
+          <div class="mobile-menu__logo"><img src="img/logo.svg" alt="Uniflow" width="110" height="24" loading="lazy"></div>
+          <ul class="mobile-menu__list-nav">
+            <!-- TODO: замени якоря (#aktivnosti, #live-trenirovki, ...) на реальные id секций страницы сезона-->
+            <li><a class="mobile-menu__link" href="#aktivnosti">Активности</a></li>
+            <li><a class="mobile-menu__link" href="#live-trenirovki">Лайв-тренировки</a></li>
+            <li><a class="mobile-menu__link" href="#zaryadki">Зарядки</a></li>
+            <li><a class="mobile-menu__link" href="#super-serii">Суперсерии</a></li>
+            <li><a class="mobile-menu__link" href="#klubnaya-karta">Клубные карты</a></li>
+            <li><a href="https://pilates-flow.ru/">На главную</a></li>
+          </ul>
+        </div>
+        <div class="mobile-menu__footer">
+          <div class="mobile-menu__buttons">
+            <button class="button button--main button--m button--full-width" href="#"><span class="button__content">   <span class="button__text">Присоединиться</span></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js?v=1.0.5" defer></script>
   </body>
 </html>
